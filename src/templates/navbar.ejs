@@ -1,0 +1,64 @@
+<div class="fixed-top hstack bg-dark">
+    <div class="btn-group" role="group">
+        <div class="btn-group">
+            <button type="button" class="btn btn-warning rounded-0 dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                File
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item" role="button">New Map</li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li class="dropdown-item" role="button">Open Map</li>
+                <li class="dropdown-item" role="button">Save Map to Disk</li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li class="dropdown-item" role="button">Settings</li>
+            </ul>
+        </div>
+        <div class="alert alert-dark m-0 p-0"></div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-warning rounded-0 dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Assets
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#asset-menu" role="button">
+                    Import Assets</li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li class="dropdown-item" data-bs-toggle="modal" role="button">Import Model Map</li>
+            </ul>
+        </div>
+        <div class="alert alert-dark m-0 p-0"></div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-warning rounded-0 dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Edit
+            </button>
+            <ul class="dropdown-menu">
+            </ul>
+        </div>
+        <div class="alert alert-dark m-0 p-0"></div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-warning rounded-0 dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                View
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item" role="button">Enable Fly Camera</li>
+            </ul>
+            <ul class="dropdown-menu">
+            </ul>
+        </div>
+    </div>
+    <span class="ms-auto pe-3 fs-5" style="color: rgb(240, 152, 55);">
+        Trail Tools
+    </span>
+</div>
+
+<!--BEGIN menus-->
+<%- include('nav_menus/import_assets'); -%>

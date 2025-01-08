@@ -1,0 +1,15 @@
+{
+  "name": "trail-tools",
+  "version": "0.1.0",
+  "main": "N/A",
+  "scripts": {
+    "build": "npx ejs src/interface.ejs --data-file src/interface.json -o index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lamersc",
+  "license": "GPL-3.0-or-later",
+  "description": "",
+  "devDependencies": {
+    "ejs": "^3.1.10"
+  }
+}

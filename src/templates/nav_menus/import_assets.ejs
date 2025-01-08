@@ -1,0 +1,25 @@
+<div class="modal" id="asset-menu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Import Assets</h1>
+            </div>
+            <form name="_asset_menu_form">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">.OBJ & .PNG Files</label>
+                        <input name="files" class="form-control" type="file" accept=".obj,.png" multiple>
+                        <div class="form-text">
+                            Other model and texture formats are not supported at the moment, but are planned for
+                            future releases.
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button name="_close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button name="_submit" type="button" class="btn btn-warning">Import</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
