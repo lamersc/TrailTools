@@ -16,20 +16,45 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+
+
 class UserInterface {
-    static hook(editor_api) {
-        this._asset_menu(editor_api);
+    static hook(editor_api, alphine) {
+        this._import_assets(editor_api, alphine);
     }
-    static _asset_menu(api) { // linked to #_asset_menu
-        const form = document.forms["_asset_menu_form"];
-        const asset_files = form.elements["files"].files;
-        const close_button = form.elements["_close"];
-        const submit_button = form.elements["_submit"];
-        submit_button.onclick = () => {
-            close_button.toggleAttribute("disabled");
-            submit_button.innerText = "Importing...";
-            
-        }
+    static _import_assets(api) { // linked to #_asset_menu
+        api.Alpine.data("import_assets", () => ({
+            status: "import",
+            import_assets() {
+                const files = this.$refs.input_files.files;
+                if (!files.length) {
+                    this.status = "No files were provided.";
+                    setTimeout(() => {
+                        this.status = "Import";
+                    }, 2000);
+                    return;
+                }
+
+                //const asset_files = form.elements["files"].files;
+                //const close_button = form.elements["_close"];
+                //const submit_button = form.elements["_submit"];
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const name = file.name;
+                    const ext = name.split(".").pop().toLowerCase();
+                    console.log(ext)
+                    if (ext === "obj") {
+                        api.assets.objects.set(name, )
+                    }
+                    else if (ext === "png") {
+
+                    }
+                }
+                this.status = "importing...";
+
+
+            }
+        }));
     }
 }
 

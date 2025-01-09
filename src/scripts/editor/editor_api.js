@@ -44,11 +44,15 @@ class KeyStates {
 }
 
 class EditorAPI {
+    Alpine = null;
     keys = new KeyStates();
     delta_time = clock.getDelta();
-    assets = new Map();
-    constructor() {
-        
+    assets = {
+        objects: new Map(),
+        textures: new Map()
+    };
+    constructor(Alpine) {
+        this.Alpine = Alpine;
     }
     update_state() {
         this.delta_time = clock.getDelta();

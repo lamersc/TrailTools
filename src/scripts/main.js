@@ -17,14 +17,16 @@
 */
 
 import * as THREE from "three";
+import { Alpine } from "alpinejs";
 import { PointerLockControls } from "three/addons/controls/PointerLockControls.js";
 import { update_camera } from "./editor/movement.js";
 import { EditorAPI } from "./editor/editor_api.js";
 import { UserInterface } from "./editor/interface.js";
 
 // initialize the Editor modules
-const editor_api = new EditorAPI();
-UserInterface.hook();
+const editor_api = new EditorAPI(Alpine);
+UserInterface.hook(editor_api);
+Alpine.start();
 
 // initialize threejs renderer
 const renderer = new THREE.WebGLRenderer({
