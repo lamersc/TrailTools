@@ -1,3 +1,4 @@
+node_modules/
 lua_runtime/
 node_modules/
 package-lock.json

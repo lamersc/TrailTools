@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*", "./src/components/*/Index.vue"],
+      "$/*": ["./src/scripts/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
